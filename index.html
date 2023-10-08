@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Marks Calculator</h1>
+    <p style="color:red"> *Please note that it is only valid for MAKAUT Colleges (HIT also Applicable)</p>
+    <form id="ygpa-form">
+      <label for="ygpa">Enter Your YGPA:</label>
+      <input type="number" id="ygpa" step="0.01" required>
+
+      <label for="subjects">Enter Total Number of Subjects:</label>
+      <input type="number" id="subjects" required>
+
+      <button type="button" onclick="calculateYGPA()">Calculate</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>Result</h2>
+      <p>Total Subject: <span id="subject-result"></span></p>
+      <p>YGPA: <span id="ygpa-result"></span></p>
+      <p>Total Marks: <span id="total-marks-result"></span></p>
+      <p>Obtained Marks: <span id="obtained-marks-result"></span></p>
+      <p>Percentage: <span id="percentage-result"></span>%</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
