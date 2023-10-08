@@ -3,15 +3,18 @@ function calculateYGPA() {
   const subjects = parseFloat(document.getElementById('subjects').value);
 
   const percentage = (ygpa - 0.75) * 10;
-  const obtainedMarks = subjects * percentage;
+  const obtainedMarks = Math.round(subjects * percentage); // Round to the nearest integer
   const totalMarks = subjects * 100;
+
+  const formattedYGPA = ygpa.toFixed(3); // Format ygpa with three decimal places
+  const formattedPercentage = percentage.toFixed(3); // Format percentage with three decimal places
 
   const resultMessage = `
   Total Subject: ${subjects}
-  YGPA: ${ygpa}
+  YGPA: ${formattedYGPA}
   Total Marks: ${totalMarks}
   Obtained Marks: ${obtainedMarks}
-  Percentage: ${percentage.toFixed(2)}%
+  Percentage: ${formattedPercentage}%
   `;
 
   // Show the results in a popup
